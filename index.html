@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #f2f2f2;
+        }
+        .main-img{
+            height: 450px;
+            width: 400px;
+            border: 1px solid black;
+            border-radius: 10px;
+            display: block;
+            margin: 40px auto;
+            box-shadow: 0 0 10px 2px #595959;
+        }
+        .p-img{
+            height: 70px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 5px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+        .p-review{
+            display: flex;
+            justify-content: center;
+        }
+
+        @media screen and (max-width:600px) {
+            .main-img{
+                width: 70%;
+                height: 90%;
+            }
+            .p-review{
+                width: 90%;
+                display: block;
+                margin: 10px auto;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <img src="main.png" id="main-img" class="main-img">
+
+    <div class="p-review">
+        <img src="main.png" class="p-img" onclick="changimg('main.png')">
+        <img src="1.png" class="p-img" onclick="changimg('1.png')"> 
+        <img src="2.png" class="p-img" onclick="changimg('2.png')">
+        <img src="3.png" class="p-img" onclick="changimg('3.png')">
+        <img src="4.png" class="p-img" onclick="changimg('4.png')">
+        <img src="5.png" class="p-img" onclick="changimg('5.png')">
+    </div>
+
+    <script>
+        function changimg(img){
+            const mainImg=document.getElementById('main-img');
+            mainImg.src=img;
+        }
+    </script>
+</body>
+</html>
